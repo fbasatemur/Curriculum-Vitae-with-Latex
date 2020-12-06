@@ -1,18 +1,21 @@
 \documentclass[10pt,a4paper]{altacv}
 
-\geometry{left=1cm,right=9cm,marginparwidth=7cm,marginparsep=1cm,top=1.5cm,bottom=1cm}
+\geometry{left=1cm,right=9cm,marginparwidth=7cm,marginparsep=1cm,top=1cm,bottom=1cm}
 
 % If using pdflatex:
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage[default]{lato}
+\usepackage{hyperref}
+
 
 % Change the colours if you want to
-\definecolor{VividPurple}{HTML}{003B64}
+\definecolor{VividBlue}{HTML}{003B64}
 \definecolor{SlateGrey}{HTML}{000000}
 \definecolor{LightGrey}{HTML}{000000}
-\colorlet{heading}{VividPurple}
-\colorlet{accent}{VividPurple}
+\definecolor{linkedinColor}{RGB}{11, 103, 194}
+\colorlet{heading}{VividBlue}
+\colorlet{accent}{linkedinColor}
 \colorlet{emphasis}{SlateGrey}
 \colorlet{body}{LightGrey}
 
@@ -35,58 +38,60 @@
   % You can add your own with \printinfo{symbol}{detail}
   \normalsize{
   \email{fatihbasatemur@gmail.com}
-  \github{github.com/fbasatemur}
-  \linkedin{linkedin.com/in/fatih-başatemur-93b6b21b2/}
-  \phone{***********}   \location{Tekirdağ, Turkey} 
+  \href{https://github.com/fbasatemur}{\github{\textcolor{linkedinColor}{github/fbasatemur}}}
+  \href{https://www.linkedin.com/in/fatih-ba\%C5\%9Fatemur-93b6b21b2/}{\linkedin{\textcolor{linkedinColor}{linkedin}}}
+  
+  \phone{**********}   \location{Tekirdağ, Turkey} 
   }
 }
-
 
 \begin{adjustwidth}{}{-8cm}
 \makecvheader
 \end{adjustwidth}
 
 \cvsection[page1sidebar]{PROFESSIONAL EXPERIENCES}
-\cvevent{}{Çevik Çözüm}{June 2020 -- July 2020} {HomeOffice}
-Web application with navigation feature for workplaces. Angular for frontend, Java and JS for backend.
+\cvevent{}{Çevik Çözüm}{June 2020 -- July 2020} {İstanbul}
+Web application with map feature for workplaces. Angular for frontend, Java and JS for backend.
+
 \smallskip
+
 \cvevent{}{Karadeniz Technical University}{July 2020 -- September 2020} {Trabzon}
 "Single-Shot Autofocus Microscopy Using Deep Learning" project was realized with Prof. Dr. Murat Ekinci. Deep learning was used to observe clearer images with a microscope.
 
 
-\cvsection[page1sidebar]{Education}
+\cvsection{Education}
 \cvevent{Computer Engineering} {Karadeniz Technical University}{2018 - Ongoing}{Trabzon, Turkey} 
-\textsc{CGPA}: 3.43/4.0
+\textsc{GPA}: 3.43/4.0
 \smallskip
 \cvevent{} {Selçuk University}{2017 - 2018}{Konya, Turkey} 
-\textsc{CGPA}: 3.83/4.0
-
+\textsc{GPA}: 3.83/4.0
 \smallskip
+\cvevent{} {Çorlu Mimar Sinan Anatolian High School}{2012 -  2016}{Tekirdağ, Turkey}
+
 \cvsection{projects}
 \cvevent{}{FFT-Variance Artificial Neural Network Creating with CUDA
 }{} {}
 
 Creation of an artificial neural network that can measure clarity from tissue images produced using Light Microscope by coding with C ++ \& CUDA.
-\\
 
 \divider
 
 \cvevent{}{Artificial Neural Network Design using CUDA}{}{}
 It offers parallel testing of artificial neural network models created using Keras in C ++ environment with CUDA. Dense, BatchNormalization, ReLu, Sigmoid etc. layers are programmed with CUDA.
 
-
 \divider
 
 \cvevent{}{Multilayer \& Multicategory Learning Rules ANN Design}{}{}
 A multi-layer and multi-neuron artificial neural network was designed. Classification of linear or nonlinear 2 dimensional samples was carried out. The project was implemented with Visual C ++ CLI.
 
-
 \divider
+\smallskip
+
+
+\begin{adjustwidth}{}{-8.3cm}
 
 \cvevent{}{SRCNN Image Restoration}{}{}
-Single image super resolution example has been tried to be created with Python/Keras and PyQt5. Artificial neural network created and trained using Python and Keras.
-
-
+Single image super resolution example has been tried to be created with Python/Keras and PyQt5. SRCNN artificial neural network model was used for image clarification.
 
 \divider
 
@@ -99,7 +104,6 @@ Covid-19 medical mask detection for public places
 
 \divider
 
-
 \cvevent{}{Classificaton of Skin Cancer with CNN}{}{}
 Classification of 7 different cancer groups using Skin Cancer MNIST HAM 10000 dataset
 \begin{itemize}
@@ -109,7 +113,6 @@ Classification of 7 different cancer groups using Skin Cancer MNIST HAM 10000 da
 
 \divider
 
-
 \cvevent{}{Circle and Line Detection With Hough Transform}{}{}
 Hough Space algorithm is used to determine the line / circle on the image by performing the edge detection in the Canny Edge Detection process on the image.
 
@@ -117,7 +120,7 @@ Hough Space algorithm is used to determine the line / circle on the image by per
 \divider
 
 \cvevent{}{Object Train Test Classification}{}{}
-It is the determination of each object using the K-Means algorithm on the image and the feature extraction result of each determined object.
+It is the determination of each object using the K-Means algorithm on the image and the object detection as a result of the feature extraction of each object.
 
 
 \divider
@@ -139,21 +142,25 @@ A website with PHP, MySQL and JS has been designed for university graduates.
 
 \cvsection{extra projects}
 \begin{itemize}
-    \item Real Time Object Tracking ( C++ / OpenCV )
+    \item Real Time Object Tracking ( C++ / OpenCV | Meanshift algorithm used )
     \item Youtube Downloader ( Python / PyQt5 and Pytube Framework )
     \item Flappy Bat ( JAVA / Android game and libGDX Framework )
     \item CUDA Matrix Multiplication/2D-3D Convulation ( Parallel programming with CUDA )
-    \item Eight Queens Puzzle ( Solution of 8 queen problems with heuristic repair method )
+    \item Eight Queens Puzzle ( Solution of 8 queen problems with Heuristic Repair Method )
 \end{itemize}
 
 
 \smallskip
 %\cvsection[page2sidebar]{AWARDS AND LEADERSHIP}
 \cvsection{AWARDS AND LEADERSHIP}
-\cvevent{}{ TUBITAK C STAR Licance Project}{01-December-2020}{Turkey}
+\cvevent{}{ 2247-C TUBITAK STAR Licance Project}{01-December-2020}{Turkey}
 
 \begin{itemize}
-    \item Computer Vision and Machine Learning based automated Light Microscopy scanning and analysis for the differential diagnosis of Malignant Neoplasia and Reactive Mesothelial Hyperplasia with Computer Aided Cytopathology.
+    \item I took part in the "Computer Vision and Machine Learning based automated Light Microscopy scanning and analysis for the differential diagnosis of Malignant Neoplasia and Reactive Mesothelial Hyperplasia with Computer Aided Cytopathology" project supported by TUBITAK within the scope of "2247-C Intern Researcher Scholarship Program".
 \end{itemize}
+
+
+\end{adjustwidth}
+
 
 \end{document}
